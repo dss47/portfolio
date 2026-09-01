@@ -23,7 +23,7 @@ export default function ProjectCard({ projectData }: ProjectCardProps) {
         alt={projectData.title}
         width={400}
         height={400}
-        className="rounded-xl object-cover sm:w-72 shrink-0"
+        className="w-full sm:w-72 h-48 sm:h-auto rounded-xl object-cover shrink-0"
       />
 
       <div className="w-full flex flex-col gap-2.5">

@@ -1,21 +1,21 @@
 export default function Me() {
   return (
-    <section id="me" className="w-full px-5 md:px-12 py-26">
-      <h2 className="text-2xl font-bold text-white mb-8 tracking-tight">
+    <section id="me" className="w-full px-4 sm:px-6 md:px-12 py-16 md:py-26 max-w-6xl mx-auto">
+      <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 md:mb-8 tracking-tight">
         $ whoami
       </h2>
 
-      <div className="bg-black border border-zinc-800 rounded-[1.6rem] overflow-hidden font-mono text-base shadow-2xl shadow-zinc-950">
-        <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-900/80 border-b border-zinc-800">
+      <div className="bg-black border border-zinc-800 rounded-2xl sm:rounded-[1.6rem] overflow-hidden font-mono text-xs sm:text-sm md:text-base shadow-2xl shadow-zinc-950">
+        <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 bg-zinc-900/80 border-b border-zinc-800">
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-500" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500" />
-            <div className="w-3 h-3 rounded-full bg-green-500" />
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500" />
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500" />
           </div>
-          <span className="text-xs text-zinc-500">saad@portfolio — fish</span>
+          <span className="text-[10px] sm:text-xs text-zinc-500">saad@portfolio — fish</span>
         </div>
 
-        <div className="p-5 md:p-8 space-y-1.5">
+        <div className="p-4 sm:p-5 md:p-8 space-y-1.5 overflow-x-auto">
           <p>
             <span className="text-green-400">saad@portfolio</span>
             <span className="text-zinc-600">:</span>
