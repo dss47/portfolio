@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Saad El-Assali</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-body: #cbd5e1;
+            --bg-cv: #ffffff;
+            --bg-sidebar: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #334155;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            background: var(--bg-cv);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 32%;
+            background-color: var(--bg-sidebar);
+            padding: 35px 30px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: contain;
+            margin: 0 auto 40px;
+            display: block;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-section {
+            margin-bottom: 22px;
+        }
+
+        .sidebar-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-list li {
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .contact-list i {
+            color: var(--text-light);
+            font-size: 13px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-tag {
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 10.5px;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        /* Main Content */
+        .main-content {
+            width: 68%;
+            padding: 35px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .role {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .summary {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: grey;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title.mt-large {
+            margin-top: 25px;
+        }
+
+        .section-title::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background-color: var(--border);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        .item-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .item-date {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-light);
+            background-color: var(--bg-sidebar);
+            padding: 3px 8px;
+            border-radius: 20px;
+        }
+
+        .item-subtitle {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .item-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .tech-stack {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tech-item {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--accent);
+            background-color: var(--accent-light);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        @media print {
+            body { padding: 0; background: none; }
+            .cv-container { box-shadow: none; width: 210mm; height: 297mm; }
+            .sidebar { border-right: 1px solid var(--border); }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            
+            /* Hide headers/footers in print dialog for browsers */
+            @page {
+                size: A4;
+                margin: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <img src="./saad.jpg" class="profile-img" alt="Saad El-Assali">
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Contact</h3>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-location-dot"></i> Casablanca, Maroc</li>
+                <li><i class="fa-solid fa-phone"></i> +212 694 992 392</li>
+                <li><i class="fa-solid fa-envelope"></i> saadassali19@gmail.com</li>
+                <li><i class="fa-brands fa-linkedin-in"></i> linkedin.com/in/saad-el-assali</li>
+                <li><i class="fa-brands fa-github"></i> github.com/dss47</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Langages</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">C / C++</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Shell</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Frameworks & Outils</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Git/GitHub</span>
+                <span class="skill-tag">UML</span>
+                <span class="skill-tag">Linux</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Soft Skills</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Travail en équipe</span>
+                <span class="skill-tag">Adaptabilité</span>
+                <span class="skill-tag">Autonomie</span>
+                <span class="skill-tag">Esprit critique</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Langues</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Français (Courant)</span>
+                <span class="skill-tag">Anglais (Avancé)</span>
+                <span class="skill-tag">Arabe (Maternelle)</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <header class="header">
+            <h1 class="name">Saad El-Assali</h1>
+            <h2 class="role">Étudiant en Ingénierie Logicielle</h2>
+        </header>
+
+        <p class="summary">
+            Élève-ingénieur en ILISI à la FST de Mohammedia, passionné par le développement full-stack, l'architecture logicielle et les environnements Linux. Je recherche un stage technique pour contribuer activement à des projets innovants et relever des défis stimulants au sein d'une équipe dynamique.
+        </p>
+
+        <h3 class="section-title">Formation Académique</h3>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">Cycle Ingénieur : ILISI</h4>
+                <span class="item-date">En cours</span>
+            </div>
+            <div class="item-subtitle">FST Mohammedia</div>
+            <p class="item-desc">
+                Ingénierie Logicielle et Intégration des Systèmes Informatiques. Conception orientée objet, architectures web et méthodologie agile.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">Diplôme d'Études Universitaires (DEUST)</h4>
+                <span class="item-date">2023 - 2025</span>
+            </div>
+            <div class="item-subtitle">FST Mohammedia</div>
+            <p class="item-desc">
+                Filière MIP (Mathématiques, Informatique, Physique). Algorithmique, structures de données en C et bases mathématiques.
+            </p>
+        </div>
+
+        <h3 class="section-title mt-large">Projets & Réalisations</h3>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">Projets GTK4 – Architecture UI & Simulation</h4>
+                <span class="item-date">2026</span>
+            </div>
+            <p class="item-desc">
+                Création d'une API d'enveloppe modulaire et développement d'une simulation interactive d'aquarium implémentant l'algorithme de flocking (Boids).
+            </p>
+            <div class="tech-stack">
+                <span class="tech-item">C</span>
+                <span class="tech-item">GTK4</span>
+                <span class="tech-item">XML</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">Penguins – Plateforme de Référencement</h4>
+                <span class="item-date">2026</span>
+            </div>
+            <p class="item-desc">
+                Annuaire interactif d'outils IA basé sur une architecture backend MVC avec API REST optimisée.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-item">React</span>
+                <span class="tech-item">PHP</span>
+                <span class="tech-item">MySQL</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">TaskFlow – Gestion Agile</h4>
+                <span class="item-date">2026</span>
+            </div>
+            <p class="item-desc">
+                Application de type Kanban avec interface réactive, gestion d'état dynamique et architecture orientée composants.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-item">Angular</span>
+                <span class="tech-item">TypeScript</span>
+            </div>
+        </div>
+
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">Atelier Robotique – Robot Mobile</h4>
+                <span class="item-date">2026</span>
+            </div>
+            <p class="item-desc">
+                Programmation d'un robot mobile autonome. Intégration de capteurs et contrôle des moteurs pour la navigation, le suivi de ligne et l'évitement d'obstacles.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-item">Arduino</span>
+                <span class="tech-item">C/C++</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h4 class="item-title">CollabSpace – Espace Collaboratif</h4>
+                <span class="item-date">2026</span>
+            </div>
+            <p class="item-desc">
+                Espace de travail avec API RESTful gérant l'authentification et la centralisation des échanges de données d'équipes.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-item">React</span>
+                <span class="tech-item">NodeJS</span>
+                <span class="tech-item">MySQL</span>
+            </div>
+        </div>
+
+
+    </main>
+</div>
+
+</body>
+</html>
