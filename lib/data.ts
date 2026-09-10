@@ -51,8 +51,7 @@ export type Project = {
 export const projectsData: Project[] = [
   {
     title: "IT Mall – AI-Powered Voice Commerce & ERP Automation Suite",
-    description:
-      "An end-to-end intelligent enterprise telephony & ERP automation platform. Engineered a real-time conversational AI agent using Asterisk AudioSocket, LLMs, and local neural TTS (Piper) for zero-latency customer qualification and live catalog querying. Built automated post-call workflows via n8n to generate official quotes in a customized Odoo 18 ERP (RBAC, dark theme), dynamically render signed PDF quotes, and deliver them instantly to callers via Meta's WhatsApp Cloud API.",
+    description: "AI-powered voice commerce and ERP automation platform integrating FreePBX/Asterisk, Odoo, n8n, and conversational AI.",
     tags: [
       { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       { name: "Odoo", icon: "https://cdn.simpleicons.org/odoo" },
@@ -68,7 +67,7 @@ export const projectsData: Project[] = [
   {
     title: "Penguins – AI Aggregator Platform",
     description:
-      "A centralized directory platform built to track and index modern AI tools. Developed a custom lightweight MVC architecture in PHP from scratch to handle heavy dataset parsing without framework overhead. Features multi-criteria asynchronous filtering powered by an optimized backend REST API, delivering sub-100ms response times for complex user queries.",
+      "Web platform for discovering and organizing AI tools, built with React, PHP, and MySQL.",
     tags: [
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
@@ -81,7 +80,7 @@ export const projectsData: Project[] = [
   {
     title: "GTK4 Aquarium",
     description:
-      "A lightweight, native Linux desktop application built to replace resource-heavy web-bloat interfaces. Engineered a custom modular XML parser wrapper API to streamline native GTK4 window layout generation. To demonstrate the UI's performance, I implemented an interactive 2D desktop simulator running a hardware-accelerated Boids flocking algorithm, maintaining a decent performance under heavy object counts.",
+      "Native Linux desktop application built with C,XML and GTK4, featuring an interactive aquarium and 2D Boids simulation.",
     tags: [
       { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
       { name: "GTK4", icon: "https://gitlab.gnome.org/GNOME/gtk/-/raw/0434ad3bd9cc2e06d3d7103810aa4b801bb4e1c6/.gitlab-ci/pages/gtk-logo.svg" },
@@ -94,7 +93,7 @@ export const projectsData: Project[] = [
   {
     title: "CollabSpace – Collaborative Workspace Hub",
     description:
-      "A secure, real-time team productivity platform driven by a decoupled RESTful architecture. Designed intricate MariaDB relational schemas and optimized data pipelines to handle synchronized resource distribution. Includes robust token-based user authentication, secure session handling, and defensive database constraints built to mitigate race conditions among concurrent user sessions.",
+      "Collaborative workspace platform for managing projects, tasks, and team activity.",
     tags: [
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "NodeJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
@@ -107,7 +106,7 @@ export const projectsData: Project[] = [
   {
     title: "TaskFlow – Reactive Agile Management Board",
     description:
-      "A high-performance Kanban-style project management application built using Angular standalone components. Leveraged reactive programming primitives (RxJS) to implement instantaneous UI state changes and seamless drag-and-drop mechanics. Solved frontend lag by enforcing strict tracking identities and decoupled change detection strategies, ensuring zero-latency board re-renders during state mutations.",
+      "Agile task management board built with Angular and TypeScript, featuring reactive UI interactions.",
     tags: [
       { name: "Angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
@@ -116,5 +115,26 @@ export const projectsData: Project[] = [
     imageUrl: "/images/taskflow.png",
     githubUrl: "https://github.com/dss47/Taskflow.git",
   },
-
+  {
+    title: "RPS It!",
+    description:
+      "Retro 2D Rock-Paper-Scissors game built with Godot and GDScript, featuring VS Friend and VS AI modes with custom pixel-art UI.",
+    tags: [
+      {
+        name: "Godot",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg",
+      },
+      {
+        name: "GDScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg",
+      },
+      {
+        name: "Cloudflare",
+        icon: "https://cdn.simpleicons.org/cloudflare/F38020",
+      },
+    ],
+    date: 2026,
+    imageUrl: "/images/rpsit.png",
+    githubUrl: "https://github.com/dss47/RPS-It-",
+  },
 ];
