@@ -1,9 +1,8 @@
-"use client";
 
-import { useState } from "react";
 import { Project } from "@/lib/data";
 import Image from "next/image";
-import { ArrowUpRight, Code2, ChevronDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { Code2 } from "lucide-react";
 
 type ProjectCardProps = {
   projectData: Project;

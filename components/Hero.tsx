@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="flex flex-col gap-2.5 items-center md:items-start">
           <p className="text-3xl sm:text-4xl md:text-5xl font-lora font-extralight">Hi! I&apos;m Saad <span className="font-bold">El-Assali</span>.</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-lora text-center md:text-left">Software Engineering Student</h1>
-          <p className="my-3 md:my-4 max-w-xl text-base md:text-lg text-gray-400">Building software across modern web applications, Linux systems, and automation, with a focus on practical engineering and performance.</p>
+          <p className="my-3 md:my-4 max-w-xl text-base md:text-lg text-gray-400">Building software across modern web applications, Linux systems, and automation, with a focus on practical engineering and performance.s</p>
           <div className="flex flex-row justify-center md:justify-start gap-3 w-full sm:w-auto">
             <Link href="#projects" className="rounded-full px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium bg-white text-gray-950 transition-colors hover:bg-gray-200">View Work</Link>
             <Link href="#contact" className="border border-gray-700 rounded-full px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-gray-400 transition-colors hover:text-white hover:border-gray-300">Get In Touch</Link>

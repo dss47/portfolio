@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Certificates from "@/components/Certificates";
 import Me from "@/components/Me";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="flex flex-col py-8">
       <Hero />
       <Projects />
+      <Certificates />
       <Me />
       <About />
       <Contact />

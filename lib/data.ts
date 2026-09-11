@@ -13,17 +13,14 @@ export const tickerItems: tickerItem[] = [
   { id: 5, name: "TypeScript", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", darkModeFix: false },
   { id: 6, name: "PHP", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", darkModeFix: false },
   { id: 7, name: "MySQL", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", darkModeFix: false },
-  { id: 8, name: "Shell", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg", darkModeFix: true },
   { id: 9, name: "React", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", darkModeFix: false },
   { id: 10, name: "Next.js", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", darkModeFix: true },
   { id: 11, name: "Angular", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg", darkModeFix: false },
   { id: 12, name: "Tailwind CSS", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg", darkModeFix: false },
   { id: 13, name: "HTML5", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", darkModeFix: false },
   { id: 14, name: "CSS3", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", darkModeFix: false },
-  { id: 15, name: "Git", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", darkModeFix: false },
   { id: 16, name: "GitHub", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", darkModeFix: true },
   { id: 17, name: "Linux", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", darkModeFix: false },
-  { id: 18, name: "Lua", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg", darkModeFix: false },
   { id: 19, name: "NodeJS", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", darkModeFix: false },
   { id: 20, name: "Arduino", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg", darkModeFix: false },
   { id: 21, name: "Odoo", logoUrl: "https://cdn.simpleicons.org/odoo", darkModeFix: false },
@@ -45,7 +42,6 @@ export type Project = {
   date: number;
   imageUrl: string;
   githubUrl?: string;
-  liveUrl?: string;
 };
 
 export const projectsData: Project[] = [
@@ -137,4 +133,29 @@ export const projectsData: Project[] = [
     imageUrl: "/images/rpsit.png",
     githubUrl: "https://github.com/dss47/RPS-It-",
   },
+];
+
+export type Certificate = {
+  title: string;
+  issuer: string;
+  date: number;
+  src: string;
+  imageUrl: string;
+};
+
+export const certificatesData: Certificate[] = [
+  {
+    title: "Certificat CCNA : Présentation des réseaux",
+    issuer: "Cisco",
+    date: 2025,
+    src: "/docs/cisco.pdf",
+    imageUrl: "/images/cisco-preview.png"
+  },
+  {
+    title: "Certificat Fonctionnel Odoo",
+    issuer: "Odoo",
+    date: 2026,
+    src: "/docs/odoo.pdf",
+    imageUrl: "/images/odoo-preview.png"
+  }
 ];
